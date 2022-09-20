@@ -1,0 +1,30 @@
+
+spring:
+  jpa:
+    database: mysql
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/loanmanagement?createDatabaseIfNotExist=true&&useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+    password: Waithaka@2013
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  sql:
+    init:
+      platform: mysql
+      mode: always
+
+
+
+server:
+  servlet:
+    contextPath: /microserviceAuth/api/v1
+  port: 20000
+
